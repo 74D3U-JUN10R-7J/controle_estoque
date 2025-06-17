@@ -1,0 +1,27 @@
+{"level":"info","message":"🚀 Inicializando a sincronização do banco de dados...","timestamp":"2025-06-16T20:18:25.280Z"}
+{"level":"info","message":"✅ Banco sincronizado com sucesso!","timestamp":"2025-06-16T20:18:25.291Z"}
+{"level":"info","message":"ℹ️ Nenhum dado antigo encontrado. Pulando limpeza.","timestamp":"2025-06-16T20:18:25.521Z"}
+{"level":"info","message":"✅ 4 fornecedores adicionados!","timestamp":"2025-06-16T20:18:25.920Z"}
+{"level":"error","message":"❌ Erro ao popular banco: SQLITE_ERROR: table Products has no column named category","timestamp":"2025-06-16T20:18:25.938Z"}
+{"level":"info","message":"🔄 Conexão com o banco de dados fechada.","timestamp":"2025-06-16T20:18:25.951Z"}
+{"level":"info","message":"🚀 Inicializando a sincronização do banco de dados...","timestamp":"2025-06-16T20:44:58.033Z"}
+{"level":"info","message":"✅ Banco sincronizado com sucesso!","timestamp":"2025-06-16T20:44:58.042Z"}
+{"level":"info","message":"ℹ️ Nenhum dado antigo encontrado. Pulando limpeza.","timestamp":"2025-06-16T20:44:58.048Z"}
+{"level":"info","message":"✅ 4 fornecedores adicionados!","timestamp":"2025-06-16T20:44:58.073Z"}
+{"level":"error","message":"❌ Erro ao popular banco: SQLITE_ERROR: table Products has no column named stock","timestamp":"2025-06-16T20:44:58.078Z"}
+{"level":"info","message":"🔄 Conexão com o banco de dados fechada.","timestamp":"2025-06-16T20:44:58.079Z"}
+{"level":"info","message":"🚀 Inicializando a sincronização do banco de dados...","timestamp":"2025-06-16T20:46:31.335Z"}
+{"level":"info","message":"✅ Banco sincronizado com sucesso!","timestamp":"2025-06-16T20:46:31.344Z"}
+{"level":"info","message":"ℹ️ Nenhum dado antigo encontrado. Pulando limpeza.","timestamp":"2025-06-16T20:46:31.350Z"}
+{"level":"info","message":"✅ 4 fornecedores adicionados!","timestamp":"2025-06-16T20:46:31.360Z"}
+{"level":"info","message":"✅ 4 produtos adicionados!","timestamp":"2025-06-16T20:46:31.390Z"}
+{"level":"info","message":"🎉 Banco de dados populado com sucesso!","timestamp":"2025-06-16T20:46:31.484Z"}
+{"level":"info","message":"🔄 Conexão com o banco de dados fechada.","timestamp":"2025-06-16T20:46:31.489Z"}
+{"level":"info","message":"🚀 Inicializando a sincronização do banco...","timestamp":"2025-06-16T20:53:15.621Z"}
+{"level":"info","message":"✅ Banco sincronizado com sucesso!","timestamp":"2025-06-16T20:53:15.631Z"}
+{"level":"warn","message":"🔄 Apagando registros antigos...","timestamp":"2025-06-16T20:53:15.637Z"}
+{"level":"info","message":"✅ Dados antigos removidos!","timestamp":"2025-06-16T20:53:15.699Z"}
+{"level":"info","message":"✅ 5 fornecedores adicionados!","timestamp":"2025-06-16T20:53:15.710Z"}
+{"level":"info","message":"✅ 20 produtos adicionados!","timestamp":"2025-06-16T20:53:15.715Z"}
+{"level":"info","message":"🎉 Banco de dados populado com sucesso!","timestamp":"2025-06-16T20:53:15.812Z"}
+{"level":"info","message":"🔄 Conexão com o banco fechada.","timestamp":"2025-06-16T20:53:15.817Z"}

@@ -1,0 +1,9 @@
+2025-06-17T01:04:49.251Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T01:04:49.263Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T01:04:49.474Z [ERROR]: ❌ Erro ao sincronizar banco: SQLITE_ERROR: table Suppliers_backup has 7 columns but 9 values were supplied
+2025-06-17T01:06:37.483Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T01:06:37.494Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T01:06:38.816Z [ERROR]: ❌ Erro ao sincronizar banco: Validation error
+2025-06-17T13:29:31.543Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T13:29:31.555Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T13:29:31.568Z [ERROR]: ❌ Erro ao sincronizar banco: Validation error

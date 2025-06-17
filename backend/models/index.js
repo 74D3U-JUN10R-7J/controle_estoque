@@ -4,36 +4,57 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const process = require('process');
+const winston = require('winston');
+
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+const configPath = path.join(__dirname, '../config/config.json');
+const config = require(configPath)[env];
 const db = {};
 
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [
+    new winston.transports.Console(),
+    new winston.transports.File({ filename: path.join(__dirname, '../logs/database.log') })
+  ]
+});
+
 let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
-} else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
+try {
+  sequelize = config.use_env_variable
+    ? new Sequelize(process.env[config.use_env_variable], config)
+    : new Sequelize({
+        dialect: config.dialect,
+        storage: config.storage,
+        logging: config.logging
+      });
+
+  logger.info('Conexão com banco estabelecida');
+} catch (error) {
+  logger.error(`Erro ao conectar ao banco: ${error.message}`);
+  process.exit(1);
 }
 
 fs.readdirSync(__dirname)
-  .filter(file => {
-    return (
-      file.indexOf('.') !== 0 &&
-      file !== basename &&
-      file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
-    );
-  })
+  .filter(file => file.indexOf('.') !== 0 && file !== basename && file.slice(-3) === '.js' && !file.includes('.test.js'))
   .forEach(file => {
-    const modelModule = require(path.join(__dirname, file)); // 👈 Ajuste para evitar erro ao carregar os modelos
-    const model = modelModule(sequelize, Sequelize.DataTypes); // 👈 Instancia corretamente
-    db[model.name] = model;
+    try {
+      const modelModule = require(path.join(__dirname, file));
+      const model = modelModule.init(sequelize, Sequelize);
+      db[model.name] = model;
+    } catch (error) {
+      logger.error(`Erro ao carregar modelo ${file}: ${error.message}`);
+    }
   });
 
-Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
+Object.values(db).forEach(model => {
+  if (model.associate) {
+    model.associate(db);
   }
 });
 

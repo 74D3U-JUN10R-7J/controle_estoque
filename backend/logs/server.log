@@ -1,0 +1,118 @@
+2025-06-16T21:14:33.030Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-16T21:14:33.042Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-16T21:14:33.951Z [ERROR]: ❌ Erro ao sincronizar banco: Validation error
+2025-06-16T21:47:21.958Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-16T21:47:21.969Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-16T21:47:21.977Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-16T21:49:14.722Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-16T21:49:14.733Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-16T21:49:14.740Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-16T21:49:36.614Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:21:49:36 +0000] "GET / HTTP/1.1" 200 52 "-" "insomnia/11.2.0"
+2025-06-16T21:50:31.662Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:21:50:31 +0000] "GET /api/products HTTP/1.1" 404 77 "-" "insomnia/11.2.0"
+2025-06-16T21:50:37.418Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:21:50:37 +0000] "GET /api/product HTTP/1.1" 404 77 "-" "insomnia/11.2.0"
+2025-06-16T21:51:31.472Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:21:51:31 +0000] "GET /api/products HTTP/1.1" 404 77 "-" "insomnia/11.2.0"
+2025-06-16T21:54:21.739Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-16T21:54:21.752Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-16T21:54:21.762Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-16T21:54:28.487Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:21:54:28 +0000] "GET /api/product HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-16T22:01:16.333Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-16T22:01:16.346Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-16T22:01:16.354Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-16T22:01:22.452Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:22:01:22 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-16T22:01:24.719Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:22:01:24 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-16T22:01:25.612Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:22:01:25 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-16T22:01:36.514Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:22:01:36 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-16T22:01:43.930Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:22:01:43 +0000] "GET /api/suppliers HTTP/1.1" 404 43 "-" "insomnia/11.2.0"
+2025-06-16T22:09:16.983Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-16T22:09:16.995Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-16T22:09:17.004Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-16T22:09:47.464Z [INFO]: ::1 - - [16/Jun/2025:22:09:47 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-16T22:09:47.748Z [INFO]: ::1 - - [16/Jun/2025:22:09:47 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-16T22:09:52.210Z [INFO]: ::1 - - [16/Jun/2025:22:09:52 +0000] "GET /api/suppliers HTTP/1.1" 404 43 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-16T22:12:59.943Z [INFO]: ::1 - - [16/Jun/2025:22:12:59 +0000] "GET /api/products HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-16T22:14:20.010Z [INFO]: ::ffff:127.0.0.1 - - [16/Jun/2025:22:14:20 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:18:11.638Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T01:18:11.651Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T01:18:12.423Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-17T01:19:02.553Z [INFO]: ::1 - - [17/Jun/2025:01:19:02 +0000] "GET /api/products HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:19:02.775Z [INFO]: ::1 - - [17/Jun/2025:01:19:02 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:20:18.285Z [INFO]: ::1 - - [17/Jun/2025:01:20:18 +0000] "GET /api/products HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:20:44.065Z [INFO]: ::1 - - [17/Jun/2025:01:20:44 +0000] "GET /api/suppliers HTTP/1.1" 404 43 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:22:49.332Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T01:22:49.344Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T01:23:01.725Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-17T01:24:10.885Z [INFO]: ::1 - - [17/Jun/2025:01:24:10 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:24:54.860Z [INFO]: ::1 - - [17/Jun/2025:01:24:54 +0000] "GET /api/products HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:24:55.035Z [INFO]: ::1 - - [17/Jun/2025:01:24:55 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:26:31.562Z [INFO]: ::1 - - [17/Jun/2025:01:26:31 +0000] "GET /api/products HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:32:17.821Z [INFO]: ::1 - - [17/Jun/2025:01:32:17 +0000] "GET /api/products HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:32:17.991Z [INFO]: ::1 - - [17/Jun/2025:01:32:17 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:32:27.008Z [INFO]: ::1 - - [17/Jun/2025:01:32:27 +0000] "GET /products HTTP/1.1" 404 147 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:35:23.288Z [INFO]: ::1 - - [17/Jun/2025:01:35:23 +0000] "GET /api/products?category=Eletr%C3%B4nicos HTTP/1.1" 200 47 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:36:42.676Z [INFO]: ::1 - - [17/Jun/2025:01:36:42 +0000] "GET /api/products HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:36:42.845Z [INFO]: ::1 - - [17/Jun/2025:01:36:42 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T01:37:07.906Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:37:07 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:37:09.233Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:37:09 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:37:15.406Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:37:15 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:37:16.220Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:37:16 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:37:27.488Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:37:27 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:41:31.514Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T01:41:31.527Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T01:41:46.108Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-17T01:44:31.630Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T01:44:31.644Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T01:44:44.106Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-17T01:44:57.195Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:44:57 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:44:58.438Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:44:58 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:45:07.778Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:45:07 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:45:08.705Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:45:08 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:45:09.394Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:45:09 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:47:10.490Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:47:10 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:47:12.254Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:47:12 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:47:12.857Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:47:12 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:48:03.322Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:48:03 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:48:04.749Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:48:04 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T01:48:15.178Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:48:15 +0000] "POST /api/products HTTP/1.1" 404 152 "-" "insomnia/11.2.0"
+2025-06-17T01:48:28.302Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:01:48:28 +0000] "GET /api/products HTTP/1.1" 200 47 "-" "insomnia/11.2.0"
+2025-06-17T02:03:21.464Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T02:03:21.475Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T02:03:21.491Z [ERROR]: ❌ Erro ao sincronizar banco: Validation error
+2025-06-17T02:27:26.190Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T02:27:26.201Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T02:27:27.403Z [ERROR]: ❌ Erro ao sincronizar banco: Validation error
+2025-06-17T13:55:18.496Z [INFO]: 🚀 Servidor iniciado na porta 3000 - Ambiente: desenvolvimento
+2025-06-17T13:55:18.510Z [INFO]: ✅ Conexão com banco estabelecida!
+2025-06-17T13:55:18.517Z [INFO]: ✅ Banco sincronizado com sucesso!
+2025-06-17T13:55:58.974Z [INFO]: ::1 - - [17/Jun/2025:13:55:58 +0000] "GET /api/products HTTP/1.1" 500 97 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T13:55:59.493Z [INFO]: ::1 - - [17/Jun/2025:13:55:59 +0000] "GET /favicon.ico HTTP/1.1" 204 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-17T18:11:52.958Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-17T18:11:52.971Z [INFO]: Conexão com banco estabelecida!
+2025-06-17T18:11:52.975Z [INFO]: Banco sincronizado com sucesso!
+2025-06-17T18:13:43.235Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:18:13:43 +0000] "GET /api/products HTTP/1.1" 200 2200 "-" "insomnia/11.2.0"
+2025-06-17T18:13:44.309Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:18:13:44 +0000] "GET /api/products HTTP/1.1" 200 2200 "-" "insomnia/11.2.0"
+2025-06-17T18:14:47.665Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:18:14:47 +0000] "GET /api/supplier HTTP/1.1" 404 151 "-" "insomnia/11.2.0"
+2025-06-17T18:14:52.129Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:18:14:52 +0000] "GET /api/suppliers HTTP/1.1" 200 916 "-" "insomnia/11.2.0"
+2025-06-17T18:26:06.432Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-17T18:26:06.444Z [INFO]: Conexão com banco estabelecida!
+2025-06-17T18:26:06.449Z [INFO]: Banco sincronizado com sucesso!
+2025-06-17T18:26:11.125Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:18:26:11 +0000] "GET /api/suppliers HTTP/1.1" 200 916 "-" "insomnia/11.2.0"
+2025-06-17T18:26:23.929Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:18:26:23 +0000] "GET /api/products HTTP/1.1" 200 2200 "-" "insomnia/11.2.0"
+2025-06-17T19:00:42.190Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-17T19:00:42.202Z [INFO]: Conexão com banco estabelecida!
+2025-06-17T19:00:42.207Z [INFO]: Banco sincronizado com sucesso!
+2025-06-17T19:00:49.736Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:19:00:49 +0000] "GET /api/products HTTP/1.1" 200 2200 "-" "insomnia/11.2.0"
+2025-06-17T19:01:01.703Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:19:01:01 +0000] "GET /api/suppliers HTTP/1.1" 200 916 "-" "insomnia/11.2.0"
+2025-06-17T19:02:53.662Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-17T19:02:53.673Z [INFO]: Conexão com banco estabelecida!
+2025-06-17T19:02:53.678Z [INFO]: Banco sincronizado com sucesso!
+2025-06-17T19:03:20.920Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:19:03:20 +0000] "GET /api/suppliers HTTP/1.1" 200 916 "-" "insomnia/11.2.0"
+2025-06-17T19:03:30.187Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:19:03:30 +0000] "GET /api/backend HTTP/1.1" 404 150 "-" "insomnia/11.2.0"
+2025-06-17T19:03:37.970Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:19:03:37 +0000] "GET /api/products HTTP/1.1" 200 2200 "-" "insomnia/11.2.0"
+2025-06-17T19:32:13.482Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-17T19:32:13.607Z [INFO]: Conexão com banco estabelecida!
+2025-06-17T19:32:13.628Z [INFO]: Banco sincronizado com sucesso!
+2025-06-17T19:32:25.154Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:19:32:25 +0000] "GET /api/products HTTP/1.1" 200 2200 "-" "insomnia/11.2.0"
+2025-06-17T19:32:36.232Z [INFO]: ::ffff:127.0.0.1 - - [17/Jun/2025:19:32:36 +0000] "GET /api/suppliers HTTP/1.1" 200 916 "-" "insomnia/11.2.0"
+2025-06-17T19:33:55.632Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-17T19:33:55.642Z [INFO]: Conexão com banco estabelecida!
+2025-06-17T19:33:55.646Z [INFO]: Banco sincronizado com sucesso!
