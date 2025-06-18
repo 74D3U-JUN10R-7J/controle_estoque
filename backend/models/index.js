@@ -1,3 +1,5 @@
+// backend/models/index.js
+
 'use strict';
 
 const fs = require('fs');
@@ -8,10 +10,10 @@ const winston = require('winston');
 
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const configPath = path.join(__dirname, '../config/config.json');
-const config = require(configPath)[env];
+const config = require(path.join(__dirname, '../config/config.json'))[env];
 const db = {};
 
+// Logger configurado com Winston
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.combine(
@@ -24,6 +26,7 @@ const logger = winston.createLogger({
   ]
 });
 
+// Conexão Sequelize
 let sequelize;
 try {
   sequelize = config.use_env_variable
@@ -40,20 +43,31 @@ try {
   process.exit(1);
 }
 
+// Carregar e inicializar modelos
 fs.readdirSync(__dirname)
-  .filter(file => file.indexOf('.') !== 0 && file !== basename && file.slice(-3) === '.js' && !file.includes('.test.js'))
+  .filter(file =>
+    file.indexOf('.') !== 0 &&
+    file !== basename &&
+    file.slice(-3) === '.js' &&
+    !file.includes('.test.js')
+  )
   .forEach(file => {
     try {
       const modelModule = require(path.join(__dirname, file));
-      const model = modelModule.init(sequelize, Sequelize);
-      db[model.name] = model;
+      if (typeof modelModule.init === 'function') {
+        const model = modelModule.init(sequelize);
+        db[model.name] = model;
+      } else {
+        logger.warn(`Modelo ${file} não possui método init()`);
+      }
     } catch (error) {
       logger.error(`Erro ao carregar modelo ${file}: ${error.message}`);
     }
   });
 
+// Executar associações, se existirem
 Object.values(db).forEach(model => {
-  if (model.associate) {
+  if (typeof model.associate === 'function') {
     model.associate(db);
   }
 });

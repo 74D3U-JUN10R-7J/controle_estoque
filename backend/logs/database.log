@@ -25,3 +25,30 @@
 {"level":"info","message":"✅ 20 produtos adicionados!","timestamp":"2025-06-16T20:53:15.715Z"}
 {"level":"info","message":"🎉 Banco de dados populado com sucesso!","timestamp":"2025-06-16T20:53:15.812Z"}
 {"level":"info","message":"🔄 Conexão com o banco fechada.","timestamp":"2025-06-16T20:53:15.817Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T16:54:40.175Z"}
+{"level":"error","message":"Erro ao carregar modelo products.js: No Sequelize instance passed","timestamp":"2025-06-18T16:54:40.180Z"}
+{"level":"error","message":"Erro ao carregar modelo produto_fornecedor.js: modelModule.init is not a function","timestamp":"2025-06-18T16:54:40.181Z"}
+{"level":"error","message":"Erro ao carregar modelo suppliers.js: No Sequelize instance passed","timestamp":"2025-06-18T16:54:40.183Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T16:58:51.362Z"}
+{"level":"error","message":"Erro ao carregar modelo products.js: No Sequelize instance passed","timestamp":"2025-06-18T16:58:51.367Z"}
+{"level":"error","message":"Erro ao carregar modelo produto_fornecedor.js: modelModule.init is not a function","timestamp":"2025-06-18T16:58:51.368Z"}
+{"level":"error","message":"Erro ao carregar modelo suppliers.js: No Sequelize instance passed","timestamp":"2025-06-18T16:58:51.370Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T17:13:17.213Z"}
+{"level":"error","message":"Erro ao carregar modelo products.js: No Sequelize instance passed","timestamp":"2025-06-18T17:13:17.218Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T17:15:03.904Z"}
+{"level":"error","message":"Erro ao carregar modelo products.js: No Sequelize instance passed","timestamp":"2025-06-18T17:15:03.910Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T17:16:38.679Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:04:36.913Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:05:37.641Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:05:52.839Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:17:02.769Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:26:20.212Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:26:46.932Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:43:35.500Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:50:11.769Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T18:52:33.995Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T20:25:02.190Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T20:48:41.147Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T21:06:03.662Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T21:09:24.714Z"}
+{"level":"info","message":"Conexão com banco estabelecida","timestamp":"2025-06-18T21:32:49.903Z"}

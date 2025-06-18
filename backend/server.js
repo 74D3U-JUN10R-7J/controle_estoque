@@ -5,8 +5,11 @@ const compression = require('compression');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const sequelize = require('./config/database');
-const productsRoutes = require('./routes/products');
-const suppliersRoutes = require('./routes/suppliers');
+
+const productRoutes = require('./routes/product');
+const supplierRoutes = require('./routes/supplier');
+const productSupplierRoutes = require('./routes/product-supplier'); // <- Corrigido aqui!
+
 const errorHandler = require('./middlewares/errorHandler');
 const { createLogger, transports, format } = require('winston');
 
@@ -27,12 +30,16 @@ const logger = createLogger({
   ]
 });
 
+// Middlewares globais
 app.use(helmet());
 app.use(compression());
 app.use(cors());
 app.use(express.json());
-app.use(morgan('combined', { stream: { write: msg => logger.info(msg.trim()) } }));
+app.use(morgan('combined', {
+  stream: { write: msg => logger.info(msg.trim()) }
+}));
 
+// Checagem de variáveis de ambiente obrigatórias
 const requiredEnvVars = ['DB_STORAGE'];
 const missingEnvVars = requiredEnvVars.filter(env => !process.env[env]);
 
@@ -41,6 +48,7 @@ if (missingEnvVars.length > 0) {
   process.exit(1);
 }
 
+// Conexão com o banco
 const connectToDatabase = async () => {
   try {
     await sequelize.authenticate();
@@ -59,17 +67,21 @@ sequelize.sync()
     process.exit(1);
   });
 
-app.use('/api/products', productsRoutes);
-app.use('/api/suppliers', suppliersRoutes);
+// Rotas principais
+app.use('/api/products', productRoutes);
+app.use('/api/suppliers', supplierRoutes);
+app.use('/api/product-supplier', productSupplierRoutes); // <- Corrigido aqui também
 
+// Rota base e favicon
 app.get('/favicon.ico', (req, res) => res.status(204).end());
-
 app.get('/', (req, res) => res.json({ message: 'API de Controle de Estoque ativa!' }));
 
+// Middleware de tratamento de erros
 app.use(errorHandler);
 
+// Inicialização do servidor
 app.listen(PORT, () => {
   logger.info(`Servidor iniciado na porta ${PORT} - Ambiente: ${process.env.NODE_ENV || 'desenvolvimento'}`);
-}).on('error', (err) => {
+}).on('error', err => {
   logger.error(`Erro ao iniciar servidor: ${err.message}`);
 });

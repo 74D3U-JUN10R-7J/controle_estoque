@@ -16,7 +16,7 @@ const logger = winston.createLogger({
 
 const registerRoute = (path, module) => {
   try {
-    const routeModule = require(`./routes/${module}`);
+    const routeModule = require(`./${module}`);
     router.use(path, routeModule);
     logger.info(`Rota registrada com sucesso: ${path}`);
   } catch (error) {
@@ -24,8 +24,9 @@ const registerRoute = (path, module) => {
   }
 };
 
-registerRoute('/products', 'products.js');
-registerRoute('/suppliers', 'suppliers.js');
+registerRoute('/products', 'product.js');
+registerRoute('/suppliers', 'supplier.js');
+registerRoute('/product-supplier', 'product-supplier.js');
 
 router.get('/', (req, res) => {
   res.json({ message: 'API de Controle de Estoque ativa!' });

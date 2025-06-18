@@ -1,4 +1,4 @@
-const { Products, Suppliers } = require('../models');
+const { Product, Supplier } = require('../models');
 const { Op } = require('sequelize');
 const { validationResult } = require('express-validator');
 const winston = require('winston');
@@ -23,11 +23,14 @@ exports.findAll = async (req, res) => {
     if (name) whereCondition.name = { [Op.like]: `%${name}%` };
     if (supplierId) whereCondition.supplierId = supplierId;
     if (minPrice) whereCondition.price = { [Op.gte]: parseFloat(minPrice) };
-    if (maxPrice) whereCondition.price = { ...whereCondition.price, [Op.lte]: parseFloat(maxPrice) };
+    if (maxPrice) whereCondition.price = {
+      ...whereCondition.price,
+      [Op.lte]: parseFloat(maxPrice)
+    };
 
-    const products = await Products.findAll({
+    const products = await Product.findAll({
       where: whereCondition,
-      include: { model: Suppliers, as: 'supplier' }
+      include: { model: Supplier, as: 'supplier' }
     });
 
     if (products.length === 0) {
@@ -49,13 +52,13 @@ exports.create = async (req, res) => {
     }
 
     const { name, description, price, barcode, supplierId } = req.body;
-    const supplierExists = await Suppliers.findByPk(supplierId);
 
+    const supplierExists = await Supplier.findByPk(supplierId);
     if (!supplierExists) {
       return res.status(400).json({ error: 'Fornecedor inválido! Fornecedor não encontrado.' });
     }
 
-    const newProduct = await Products.create({ name, description, price, barcode, supplierId });
+    const newProduct = await Product.create({ name, description, price, barcode, supplierId });
     res.status(201).json({ message: 'Produto criado com sucesso!', product: newProduct });
   } catch (error) {
     logger.error(`Erro ao criar produto: ${error.message}`);
@@ -65,15 +68,15 @@ exports.create = async (req, res) => {
 
 exports.getProductById = async (req, res) => {
   try {
-    const product = await Products.findByPk(req.params.id, {
-      include: [{ model: Suppliers, as: 'supplier' }]
+    const product = await Product.findByPk(req.params.id, {
+      include: { model: Supplier, as: 'supplier' }
     });
 
     if (!product) {
       return res.status(404).json({ error: 'Produto não encontrado!' });
     }
 
-    res.json(product);
+    res.status(200).json(product);
   } catch (error) {
     logger.error(`Erro ao buscar produto: ${error.message}`);
     res.status(500).json({ error: 'Erro ao buscar produto!', details: error.message });
@@ -85,13 +88,13 @@ exports.update = async (req, res) => {
     const { id } = req.params;
     const { name, description, price, barcode, supplierId } = req.body;
 
-    const product = await Products.findByPk(id);
+    const product = await Product.findByPk(id);
     if (!product) {
       return res.status(404).json({ error: 'Produto não encontrado!' });
     }
 
     if (supplierId) {
-      const supplierExists = await Suppliers.findByPk(supplierId);
+      const supplierExists = await Supplier.findByPk(supplierId);
       if (!supplierExists) {
         return res.status(400).json({ error: 'Fornecedor inválido! Fornecedor não encontrado.' });
       }
@@ -109,7 +112,7 @@ exports.delete = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const product = await Products.findByPk(id);
+    const product = await Product.findByPk(id);
     if (!product) {
       return res.status(404).json({ error: 'Produto não encontrado!' });
     }

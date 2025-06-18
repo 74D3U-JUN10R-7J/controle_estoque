@@ -1,4 +1,4 @@
-const { Suppliers } = require('../models');
+const { Supplier } = require('../models');
 const { validationResult } = require('express-validator');
 const winston = require('winston');
 
@@ -16,7 +16,7 @@ const logger = winston.createLogger({
 
 exports.getAllSuppliers = async (req, res) => {
   try {
-    const suppliers = await Suppliers.findAll({
+    const suppliers = await Supplier.findAll({
       attributes: ['id', 'name', 'email', 'phone', 'createdAt', 'updatedAt', 'contact', 'address', 'deletedAt']
     });
 
@@ -40,12 +40,12 @@ exports.createSupplier = async (req, res) => {
 
     const { name, email, phone, contact, address, deletedAt } = req.body;
 
-    const existingSupplier = await Suppliers.findOne({ where: { email } });
+    const existingSupplier = await Supplier.findOne({ where: { email } });
     if (existingSupplier) {
       return res.status(400).json({ error: 'Já existe um fornecedor com este e-mail!' });
     }
 
-    const newSupplier = await Suppliers.create({ name, email, phone, contact, address, deletedAt });
+    const newSupplier = await Supplier.create({ name, email, phone, contact, address, deletedAt });
     res.status(201).json({ message: 'Fornecedor criado com sucesso!', supplier: newSupplier });
   } catch (error) {
     logger.error(`Erro ao criar fornecedor: ${error.message}`);
@@ -55,7 +55,7 @@ exports.createSupplier = async (req, res) => {
 
 exports.getSupplierById = async (req, res) => {
   try {
-    const supplier = await Suppliers.findByPk(req.params.id, {
+    const supplier = await Supplier.findByPk(req.params.id, {
       attributes: ['id', 'name', 'email', 'phone', 'createdAt', 'updatedAt', 'contact', 'address', 'deletedAt']
     });
 
@@ -75,7 +75,7 @@ exports.updateSupplier = async (req, res) => {
     const { id } = req.params;
     const { name, email, phone, contact, address, deletedAt } = req.body;
 
-    const supplier = await Suppliers.findByPk(id);
+    const supplier = await Supplier.findByPk(id);
     if (!supplier) {
       return res.status(404).json({ error: 'Fornecedor não encontrado!' });
     }
@@ -92,7 +92,7 @@ exports.deleteSupplier = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const supplier = await Suppliers.findByPk(id);
+    const supplier = await Supplier.findByPk(id);
     if (!supplier) {
       return res.status(404).json({ error: 'Fornecedor não encontrado!' });
     }

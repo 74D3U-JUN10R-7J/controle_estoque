@@ -1,0 +1,13 @@
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You must use the 'as' keyword to specify the alias within your include statement.","timestamp":"2025-06-18T18:17:56.530Z"}
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You must use the 'as' keyword to specify the alias within your include statement.","timestamp":"2025-06-18T18:27:06.006Z"}
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You must use the 'as' keyword to specify the alias within your include statement.","timestamp":"2025-06-18T18:27:07.461Z"}
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You must use the 'as' keyword to specify the alias within your include statement.","timestamp":"2025-06-18T18:27:09.922Z"}
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You must use the 'as' keyword to specify the alias within your include statement.","timestamp":"2025-06-18T18:29:25.818Z"}
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You must use the 'as' keyword to specify the alias within your include statement.","timestamp":"2025-06-18T18:38:28.898Z"}
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You must use the 'as' keyword to specify the alias within your include statement.","timestamp":"2025-06-18T18:41:25.672Z"}
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You must use the 'as' keyword to specify the alias within your include statement.","timestamp":"2025-06-18T18:41:26.713Z"}
+{"level":"error","message":"Erro ao buscar produtos: Cannot read properties of undefined (reading 'constructor')","timestamp":"2025-06-18T19:56:35.102Z"}
+{"level":"error","message":"Erro ao buscar fornecedores: Cannot convert undefined or null to object","timestamp":"2025-06-18T19:56:53.267Z"}
+{"level":"error","message":"Erro ao buscar produtos: Cannot read properties of undefined (reading 'constructor')","timestamp":"2025-06-18T19:57:59.387Z"}
+{"level":"error","message":"Erro ao buscar produtos: Cannot read properties of undefined (reading 'constructor')","timestamp":"2025-06-18T20:08:45.615Z"}
+{"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You've included an alias (Product), but it does not match the alias(es) defined in your association (product).","timestamp":"2025-06-18T21:06:11.012Z"}
