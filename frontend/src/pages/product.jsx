@@ -42,10 +42,16 @@ export default function ProductList() {
               const preco = p.price ?? p.preço ?? 'N/A';
               const categoria = p.category ?? p.categoria ?? 'N/A';
               const estoque = p.stock ?? p.estoque ?? 'N/A';
-              const fornecedor =
-                p.supplier?.name ??
-                p.fornecedor?.nome ??
-                (p.supplierId ? `#${p.supplierId}` : 'Não vinculado');
+
+              const fornecedorNome = p.supplier?.name ?? p.fornecedor?.nome;
+              const fornecedorCNPJ = p.supplier?.cnpj ?? p.fornecedor?.cnpj;
+
+              const fornecedor = fornecedorNome
+                ? `${fornecedorNome}${fornecedorCNPJ ? ` — CNPJ: ${fornecedorCNPJ}` : ''}`
+                : p.supplierId
+                ? `#${p.supplierId}`
+                : 'Não vinculado';
+
               const dataCriacao = p.createdAt ?? p["criado em"] ?? null;
               const dataFormatada = dataCriacao
                 ? new Date(dataCriacao).toLocaleDateString()

@@ -30,7 +30,11 @@ exports.findAll = async (req, res) => {
 
     const products = await Product.findAll({
       where: whereCondition,
-      include: { model: Supplier, as: 'supplier' }
+      include: {
+        model: Supplier,
+        as: 'supplier',
+        attributes: ['id', 'name', 'cnpj']
+      }
     });
 
     if (products.length === 0) {
@@ -69,7 +73,11 @@ exports.create = async (req, res) => {
 exports.getProductById = async (req, res) => {
   try {
     const product = await Product.findByPk(req.params.id, {
-      include: { model: Supplier, as: 'supplier' }
+      include: {
+        model: Supplier,
+        as: 'supplier',
+        attributes: ['id', 'name', 'cnpj']
+      }
     });
 
     if (!product) {

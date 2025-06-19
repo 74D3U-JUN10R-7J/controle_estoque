@@ -17,7 +17,18 @@ const logger = winston.createLogger({
 exports.getAllSuppliers = async (req, res) => {
   try {
     const suppliers = await Supplier.findAll({
-      attributes: ['id', 'name', 'email', 'phone', 'createdAt', 'updatedAt', 'contact', 'address', 'deletedAt']
+      attributes: [
+        'id',
+        'name',
+        'cnpj',
+        'email',
+        'phone',
+        'createdAt',
+        'updatedAt',
+        'contact',
+        'address',
+        'deletedAt'
+      ]
     });
 
     if (suppliers.length === 0) {
@@ -38,14 +49,14 @@ exports.createSupplier = async (req, res) => {
       return res.status(400).json({ error: 'Validação falhou.', details: errors.array() });
     }
 
-    const { name, email, phone, contact, address, deletedAt } = req.body;
+    const { name, email, phone, contact, address, deletedAt, cnpj } = req.body;
 
     const existingSupplier = await Supplier.findOne({ where: { email } });
     if (existingSupplier) {
       return res.status(400).json({ error: 'Já existe um fornecedor com este e-mail!' });
     }
 
-    const newSupplier = await Supplier.create({ name, email, phone, contact, address, deletedAt });
+    const newSupplier = await Supplier.create({ name, email, phone, contact, address, deletedAt, cnpj });
     res.status(201).json({ message: 'Fornecedor criado com sucesso!', supplier: newSupplier });
   } catch (error) {
     logger.error(`Erro ao criar fornecedor: ${error.message}`);
@@ -56,7 +67,18 @@ exports.createSupplier = async (req, res) => {
 exports.getSupplierById = async (req, res) => {
   try {
     const supplier = await Supplier.findByPk(req.params.id, {
-      attributes: ['id', 'name', 'email', 'phone', 'createdAt', 'updatedAt', 'contact', 'address', 'deletedAt']
+      attributes: [
+        'id',
+        'name',
+        'cnpj',
+        'email',
+        'phone',
+        'createdAt',
+        'updatedAt',
+        'contact',
+        'address',
+        'deletedAt'
+      ]
     });
 
     if (!supplier) {
@@ -73,14 +95,14 @@ exports.getSupplierById = async (req, res) => {
 exports.updateSupplier = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, email, phone, contact, address, deletedAt } = req.body;
+    const { name, email, phone, contact, address, deletedAt, cnpj } = req.body;
 
     const supplier = await Supplier.findByPk(id);
     if (!supplier) {
       return res.status(404).json({ error: 'Fornecedor não encontrado!' });
     }
 
-    await supplier.update({ name, email, phone, contact, address, deletedAt });
+    await supplier.update({ name, email, phone, contact, address, deletedAt, cnpj });
     res.status(200).json({ message: 'Fornecedor atualizado com sucesso!', supplier });
   } catch (error) {
     logger.error(`Erro ao atualizar fornecedor: ${error.message}`);

@@ -35,6 +35,7 @@ export default function Supplier() {
           ) : (
             fornecedores.map(f => {
               const nome = f.name ?? f.nome ?? 'N/A';
+              const cnpj = f.cnpj ?? f["CNPJ"] ?? null;
               const email = f.email ?? f["e-mail"] ?? 'N/A';
               const telefone = f.phone ?? f.telefone ?? 'N/A';
               const contato = f.contact ?? f.contato ?? 'N/A';
@@ -47,6 +48,7 @@ export default function Supplier() {
               return (
                 <li key={f.id}>
                   <strong>{nome}</strong><br />
+                  {cnpj && <>🧾 CNPJ: <span style={{ fontFamily: 'monospace' }}>{cnpj}</span><br /></>}
                   📧 E-mail: {email}<br />
                   📞 Telefone: {telefone}<br />
                   📱 Contato: {contato}<br />
