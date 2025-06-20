@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { ProductSupplier, Product, Supplier } = require('../models');
 const winston = require('winston');
+const { Op } = require('sequelize');
 
 const logger = winston.createLogger({
   level: 'info',
@@ -18,7 +19,7 @@ router.get('/', async (req, res) => {
     const relacoes = await ProductSupplier.findAll({
       include: [
         { model: Product, as: 'product', attributes: ['name'] },
-        { model: Supplier, as: 'supplier', attributes: ['name'] }
+        { model: Supplier, as: 'supplier', attributes: ['razao_social'] }
       ]
     });
 
@@ -26,7 +27,7 @@ router.get('/', async (req, res) => {
       produto_id: item.produto_id,
       fornecedor_id: item.fornecedor_id,
       nomeProduto: item.product?.name || '(desconhecido)',
-      nomeFornecedor: item.supplier?.name || '(desconhecido)',
+      nomeFornecedor: item.supplier?.razao_social || '(desconhecido)',
       quantidade: item.quantidade
     }));
 
@@ -46,7 +47,7 @@ router.get('/fornecedor/:id', async (req, res) => {
       where: { fornecedor_id: fornecedorId },
       include: [
         { model: Product, as: 'product', attributes: ['id', 'name', 'category', 'price'] },
-        { model: Supplier, as: 'supplier', attributes: ['name'] }
+        { model: Supplier, as: 'supplier', attributes: ['razao_social'] }
       ]
     });
 
@@ -61,7 +62,7 @@ router.get('/fornecedor/:id', async (req, res) => {
       preco: item.product?.price,
       quantidade: item.quantidade,
       fornecedor_id: item.fornecedor_id,
-      fornecedor_nome: item.supplier?.name
+      fornecedor_nome: item.supplier?.razao_social
     }));
 
     res.status(200).json(resultado);
@@ -80,7 +81,7 @@ router.get('/produto/:id', async (req, res) => {
       where: { produto_id: produtoId },
       include: [
         { model: Product, as: 'product', attributes: ['name'] },
-        { model: Supplier, as: 'supplier', attributes: ['id', 'name', 'contact'] }
+        { model: Supplier, as: 'supplier', attributes: ['id', 'razao_social', 'contact'] }
       ]
     });
 
@@ -90,7 +91,7 @@ router.get('/produto/:id', async (req, res) => {
 
     const resultado = vinculos.map(item => ({
       fornecedor_id: item.fornecedor_id,
-      fornecedor_nome: item.supplier?.name,
+      fornecedor_nome: item.supplier?.razao_social,
       contato: item.supplier?.contact,
       quantidade: item.quantidade,
       nomeProduto: item.product?.name
@@ -101,18 +102,16 @@ router.get('/produto/:id', async (req, res) => {
     logger.error(`Erro ao buscar fornecedores por produto: ${err.message}`);
     res.status(500).json({ erro: 'Erro ao buscar fornecedores por produto.', detalhes: err.message });
   }
-});
-
-// GET - Estoques abaixo do limite
+});// GET - Estoques abaixo do limite
 router.get('/quantidade-baixa/:limite', async (req, res) => {
   try {
     const limite = parseInt(req.params.limite);
 
     const resultados = await ProductSupplier.findAll({
-      where: { quantidade: { [require('sequelize').Op.lt]: limite } },
+      where: { quantidade: { [Op.lt]: limite } },
       include: [
         { model: Product, as: 'product', attributes: ['name'] },
-        { model: Supplier, as: 'supplier', attributes: ['name'] }
+        { model: Supplier, as: 'supplier', attributes: ['razao_social'] }
       ]
     });
 
@@ -120,7 +119,7 @@ router.get('/quantidade-baixa/:limite', async (req, res) => {
       produto_id: item.produto_id,
       nomeProduto: item.product?.name,
       fornecedor_id: item.fornecedor_id,
-      nomeFornecedor: item.supplier?.name,
+      nomeFornecedor: item.supplier?.razao_social,
       quantidade: item.quantidade
     })));
   } catch (err) {
@@ -139,20 +138,22 @@ router.get('/resumo', async (req, res) => {
       ],
       group: ['fornecedor_id'],
       include: [
-        { model: Supplier, as: 'supplier', attributes: ['name'] }
+        { model: Supplier, as: 'supplier', attributes: ['razao_social'] }
       ]
     });
 
     res.status(200).json(resultado.map(item => ({
       fornecedor_id: item.fornecedor_id,
-      nomeFornecedor: item.supplier?.name,
+      nomeFornecedor: item.supplier?.razao_social,
       total_fornecido: item.dataValues.total_fornecido
     })));
   } catch (err) {
     logger.error(`Erro ao gerar resumo: ${err.message}`);
     res.status(500).json({ erro: 'Erro ao gerar resumo.', detalhes: err.message });
   }
-});// POST - Cria novo vínculo
+});
+
+// POST - Cria novo vínculo
 router.post('/', async (req, res) => {
   try {
     const { produto_id, fornecedor_id, quantidade } = req.body;
@@ -176,7 +177,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// PUT - Atualiza quantidade de vínculo existente
+// PUT - Atualiza vínculo existente
 router.put('/', async (req, res) => {
   try {
     const { produto_id, fornecedor_id, quantidade } = req.body;

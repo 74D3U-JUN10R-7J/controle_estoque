@@ -1,40 +1,40 @@
-// backend/routes/supplier.js
 const express = require('express');
 const { body, param } = require('express-validator');
 const router = express.Router();
 const supplierController = require('../controllers/suppliersController');
 
-// Listar todos os fornecedores
+// 🔍 Busca avançada com filtros
+router.get('/search', supplierController.searchSuppliers);
+
+// 📋 Listar todos os fornecedores
 router.get('/', supplierController.getAllSuppliers);
 
-// Obter fornecedor por ID
+// 🔎 Obter fornecedor por ID
 router.get(
   '/:id',
   param('id').isInt().withMessage('ID inválido!'),
   supplierController.getSupplierById
 );
 
-// Criar novo fornecedor
+// ➕ Criar novo fornecedor
 router.post(
   '/',
-  body('name')
-    .notEmpty().withMessage('Nome é obrigatório.')
-    .isLength({ min: 3 }).withMessage('Nome deve ter pelo menos 3 caracteres.'),
+  body('razao_social')
+    .notEmpty().withMessage('Razão social é obrigatória.')
+    .isLength({ min: 3 }).withMessage('Razão social deve ter pelo menos 3 caracteres.'),
+  body('cnpj').notEmpty().withMessage('CNPJ é obrigatório.'),
   body('email').optional().isEmail().withMessage('E-mail inválido.'),
-  body('phone').optional().isString(),
-  body('contact').optional().isLength({ min: 3 }).withMessage('Contato deve ter pelo menos 3 caracteres.'),
-  body('address').optional().isString(),
   supplierController.createSupplier
 );
 
-// Atualizar fornecedor
+// ✏️ Atualizar fornecedor
 router.put(
   '/:id',
   param('id').isInt().withMessage('ID inválido!'),
   supplierController.updateSupplier
 );
 
-// Remover fornecedor
+// ❌ Remover fornecedor
 router.delete(
   '/:id',
   param('id').isInt().withMessage('ID inválido!'),

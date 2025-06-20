@@ -1,7 +1,7 @@
-const { Product, Supplier } = require('../models');
-const { Op } = require('sequelize');
+const Product = require('../models/product');
 const { validationResult } = require('express-validator');
 const winston = require('winston');
+const { Op } = require('sequelize');
 
 const logger = winston.createLogger({
   level: 'error',
@@ -15,108 +15,68 @@ const logger = winston.createLogger({
   ]
 });
 
-exports.findAll = async (req, res) => {
+exports.getAllProducts = async (req, res) => {
   try {
-    const { name, supplierId, minPrice, maxPrice } = req.query;
-    const whereCondition = {};
-
-    if (name) whereCondition.name = { [Op.like]: `%${name}%` };
-    if (supplierId) whereCondition.supplierId = supplierId;
-    if (minPrice) whereCondition.price = { [Op.gte]: parseFloat(minPrice) };
-    if (maxPrice) whereCondition.price = {
-      ...whereCondition.price,
-      [Op.lte]: parseFloat(maxPrice)
-    };
-
-    const products = await Product.findAll({
-      where: whereCondition,
-      include: {
-        model: Supplier,
-        as: 'supplier',
-        attributes: ['id', 'name', 'cnpj']
-      }
-    });
-
+    const products = await Product.findAll();
     if (products.length === 0) {
       return res.status(404).json({ message: 'Nenhum produto encontrado.' });
     }
-
-    res.status(200).json(products);
+    res.status(200).json({ message: 'Produtos recuperados com sucesso!', total: products.length, products });
   } catch (error) {
-    logger.error(`Erro ao listar produtos: ${error.message}`);
-    res.status(500).json({ error: 'Erro ao listar produtos!', details: error.message });
-  }
-};
-
-exports.create = async (req, res) => {
-  try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ error: 'Validação falhou', details: errors.array() });
-    }
-
-    const { name, description, price, barcode, supplierId } = req.body;
-
-    const supplierExists = await Supplier.findByPk(supplierId);
-    if (!supplierExists) {
-      return res.status(400).json({ error: 'Fornecedor inválido! Fornecedor não encontrado.' });
-    }
-
-    const newProduct = await Product.create({ name, description, price, barcode, supplierId });
-    res.status(201).json({ message: 'Produto criado com sucesso!', product: newProduct });
-  } catch (error) {
-    logger.error(`Erro ao criar produto: ${error.message}`);
-    res.status(500).json({ error: 'Erro ao criar produto!', details: error.message });
+    logger.error(`Erro ao buscar produtos: ${error.message}`);
+    res.status(500).json({ error: 'Erro ao buscar produtos.', details: error.message });
   }
 };
 
 exports.getProductById = async (req, res) => {
   try {
-    const product = await Product.findByPk(req.params.id, {
-      include: {
-        model: Supplier,
-        as: 'supplier',
-        attributes: ['id', 'name', 'cnpj']
-      }
-    });
-
+    const product = await Product.findByPk(req.params.id);
     if (!product) {
       return res.status(404).json({ error: 'Produto não encontrado!' });
     }
-
     res.status(200).json(product);
   } catch (error) {
     logger.error(`Erro ao buscar produto: ${error.message}`);
-    res.status(500).json({ error: 'Erro ao buscar produto!', details: error.message });
+    res.status(500).json({ error: 'Erro ao buscar produto.', details: error.message });
   }
 };
 
-exports.update = async (req, res) => {
+exports.createProduct = async (req, res) => {
+  try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ error: 'Validação falhou.', details: errors.array() });
+    }
+
+    const data = req.body;
+
+    const newProduct = await Product.create(data);
+    res.status(201).json({ message: 'Produto criado com sucesso!', product: newProduct });
+  } catch (error) {
+    logger.error(`Erro ao criar produto: ${error.message}`);
+    res.status(500).json({ error: 'Erro ao criar produto.', details: error.message });
+  }
+};
+
+exports.updateProduct = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, description, price, barcode, supplierId } = req.body;
+    const data = req.body;
 
     const product = await Product.findByPk(id);
     if (!product) {
       return res.status(404).json({ error: 'Produto não encontrado!' });
     }
 
-    if (supplierId) {
-      const supplierExists = await Supplier.findByPk(supplierId);
-      if (!supplierExists) {
-        return res.status(400).json({ error: 'Fornecedor inválido! Fornecedor não encontrado.' });
-      }
-    }
-
-    await product.update({ name, description, price, barcode, supplierId });
+    await product.update(data);
     res.status(200).json({ message: 'Produto atualizado com sucesso!', product });
   } catch (error) {
     logger.error(`Erro ao atualizar produto: ${error.message}`);
-    res.status(500).json({ error: 'Erro ao atualizar produto!', details: error.message });
+    res.status(500).json({ error: 'Erro ao atualizar produto.', details: error.message });
   }
 };
 
-exports.delete = async (req, res) => {
+exports.deleteProduct = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -126,9 +86,9 @@ exports.delete = async (req, res) => {
     }
 
     await product.destroy();
-    res.status(200).json({ message: 'Produto excluído com sucesso!' });
+    res.status(200).json({ message: 'Produto removido com sucesso!' });
   } catch (error) {
     logger.error(`Erro ao excluir produto: ${error.message}`);
-    res.status(500).json({ error: 'Erro ao excluir produto!', details: error.message });
+    res.status(500).json({ error: 'Erro ao excluir produto.', details: error.message });
   }
 };

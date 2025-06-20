@@ -6,8 +6,8 @@ const router = express.Router();
 const { body, param } = require('express-validator');
 const productController = require('../controllers/productsController');
 
-// Listar todos os produtos com filtros opcionais
-router.get('/', productController.findAll);
+// Listar todos os produtos
+router.get('/', productController.getAllProducts);
 
 // Obter produto por ID
 router.get(
@@ -22,7 +22,7 @@ router.post(
   body('name').notEmpty().withMessage('Nome é obrigatório.'),
   body('price').isFloat({ min: 0 }).withMessage('Preço deve ser um número positivo.'),
   body('supplierId').isInt().withMessage('ID do fornecedor é obrigatório.'),
-  productController.create
+  productController.createProduct
 );
 
 // Atualizar produto existente
@@ -32,14 +32,14 @@ router.put(
   body('name').optional().notEmpty().withMessage('Nome não pode ser vazio.'),
   body('price').optional().isFloat({ min: 0 }).withMessage('Preço deve ser um número positivo.'),
   body('supplierId').optional().isInt().withMessage('ID do fornecedor deve ser numérico.'),
-  productController.update
+  productController.updateProduct
 );
 
 // Excluir produto
 router.delete(
   '/:id',
   param('id').isInt().withMessage('ID inválido!'),
-  productController.delete
+  productController.deleteProduct
 );
 
 module.exports = router;

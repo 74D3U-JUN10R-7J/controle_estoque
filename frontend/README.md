@@ -1,12 +1,42 @@
-# React + Vite
+# Controle de Estoque
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido por José Tadeu Nunes de Araujo Junior, com base em experiência prática e conhecimento empírico em gestão de dados e automação de processos.
 
-Currently, two official plugins are available:
+> 📌 Este repositório foi estruturado para fins exclusivamente acadêmicos, como parte do processo de certificação de competências no curso de Análise e Desenvolvimento de Sistemas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🎓 Contexto Acadêmico
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Projeto apresentado como requisito da disciplina **Projeto Integrador** do 4º semestre do curso de Análise de Sistemas.
+
+> **Nota:** A instituição de ensino (Gran Faculdade) não detém qualquer direito sobre o código-fonte, estrutura de dados ou lógica de negócio aqui implementados. A propriedade intelectual é integralmente do autor José Tadeu Nunes de Araujo Junior
+
+---
+
+## 📦 Sobre o Sistema
+
+Este sistema tem como objetivo **gerenciar produtos e fornecedores**, permitindo operações de cadastro, edição e associação entre eles. Ele facilita o acompanhamento de estoque e otimiza a relação com fornecedores.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Backend:** Node.js com Express, Sequelize e SQLite
+- **Frontend:** React com Axios
+- **Banco de Dados:** SQLite (com possibilidade de migração para PostgreSQL)
+- **Ferramentas:** Visual Studio Code, Git, Insomnia
+
+---
+
+## ⚖️ Licença
+
+Todos os direitos reservados. O uso, redistribuição ou modificação deste projeto sem autorização expressa do autor é proibido.
+
+## 📁 Repositório
+
+[(https://github.com/74D3U-JUN10R-7J/controle_estoque.git)
+
+---
+
+🛠️ Desenvolvido com dedicação, café e muito Excel convertido em banco de dados relacional.

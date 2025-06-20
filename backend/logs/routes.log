@@ -11,3 +11,14 @@
 {"level":"error","message":"Erro ao buscar produtos: Cannot read properties of undefined (reading 'constructor')","timestamp":"2025-06-18T19:57:59.387Z"}
 {"level":"error","message":"Erro ao buscar produtos: Cannot read properties of undefined (reading 'constructor')","timestamp":"2025-06-18T20:08:45.615Z"}
 {"level":"error","message":"Erro ao buscar associações: Product is associated to ProductSupplier using an alias. You've included an alias (Product), but it does not match the alias(es) defined in your association (product).","timestamp":"2025-06-18T21:06:11.012Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T18:44:04.265Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T18:44:04.286Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T18:44:09.585Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T18:44:09.611Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T18:47:40.609Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T18:52:18.594Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T18:53:07.619Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T18:53:08.689Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T19:03:29.820Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T19:04:16.688Z"}
+{"level":"error","message":"Erro ao buscar vínculos: SQLITE_ERROR: no such column: supplier.name","timestamp":"2025-06-19T19:04:26.064Z"}
