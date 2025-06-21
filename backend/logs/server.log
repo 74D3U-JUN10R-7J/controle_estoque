@@ -1363,3 +1363,6 @@
 2025-06-21T15:28:17.247Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
 2025-06-21T15:28:17.259Z [INFO]: Conexão com banco estabelecida!
 2025-06-21T15:28:17.268Z [INFO]: Banco sincronizado com sucesso!
+2025-06-21T16:08:54.107Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-21T16:08:54.120Z [INFO]: Conexão com banco estabelecida!
+2025-06-21T16:08:54.129Z [INFO]: Banco sincronizado com sucesso!
