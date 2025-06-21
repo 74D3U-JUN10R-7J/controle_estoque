@@ -1,19 +1,11 @@
-// backend/models/index.js
-
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
-const process = require('process');
 const winston = require('winston');
 
-const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
-const config = require(path.join(__dirname, '../config/config.json'))[env];
-const db = {};
-
-// Logger configurado com Winston
+// Logger com Winston
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.combine(
@@ -26,24 +18,12 @@ const logger = winston.createLogger({
   ]
 });
 
-// Conexão Sequelize
-let sequelize;
-try {
-  sequelize = config.use_env_variable
-    ? new Sequelize(process.env[config.use_env_variable], config)
-    : new Sequelize({
-        dialect: config.dialect,
-        storage: config.storage,
-        logging: config.logging
-      });
-
-  logger.info('Conexão com banco estabelecida');
-} catch (error) {
-  logger.error(`Erro ao conectar ao banco: ${error.message}`);
-  process.exit(1);
-}
+// ✅ Aqui usamos apenas o database.js
+const sequelize = require('../config/database');
+const db = {};
 
 // Carregar e inicializar modelos
+const basename = path.basename(__filename);
 fs.readdirSync(__dirname)
   .filter(file =>
     file.indexOf('.') !== 0 &&

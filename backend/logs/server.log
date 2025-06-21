@@ -1292,3 +1292,50 @@
 2025-06-21T12:46:19.405Z [INFO]: ::1 - - [21/Jun/2025:12:46:19 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
 2025-06-21T12:46:29.981Z [INFO]: ::1 - - [21/Jun/2025:12:46:29 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
 2025-06-21T12:46:30.003Z [INFO]: ::1 - - [21/Jun/2025:12:46:30 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:27:58.246Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-21T14:27:58.256Z [INFO]: Conexão com banco estabelecida!
+2025-06-21T14:27:58.257Z [INFO]: Banco sincronizado com sucesso!
+2025-06-21T14:31:32.309Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-21T14:31:32.320Z [INFO]: Conexão com banco estabelecida!
+2025-06-21T14:31:32.322Z [INFO]: Banco sincronizado com sucesso!
+2025-06-21T14:40:05.488Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-21T14:40:05.497Z [INFO]: Conexão com banco estabelecida!
+2025-06-21T14:40:05.498Z [INFO]: Banco sincronizado com sucesso!
+2025-06-21T14:40:57.498Z [INFO]: ::1 - - [21/Jun/2025:14:40:57 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:40:57.519Z [INFO]: ::1 - - [21/Jun/2025:14:40:57 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:40:57.531Z [INFO]: ::1 - - [21/Jun/2025:14:40:57 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:40:57.547Z [INFO]: ::1 - - [21/Jun/2025:14:40:57 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:40:59.095Z [INFO]: ::1 - - [21/Jun/2025:14:40:59 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:40:59.109Z [INFO]: ::1 - - [21/Jun/2025:14:40:59 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:41:00.326Z [INFO]: ::1 - - [21/Jun/2025:14:41:00 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:41:00.344Z [INFO]: ::1 - - [21/Jun/2025:14:41:00 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:41:02.523Z [INFO]: ::1 - - [21/Jun/2025:14:41:02 +0000] "GET /api/product-supplier HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:41:02.550Z [INFO]: ::1 - - [21/Jun/2025:14:41:02 +0000] "GET /api/product-supplier HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:41:03.633Z [INFO]: ::1 - - [21/Jun/2025:14:41:03 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:41:03.644Z [INFO]: ::1 - - [21/Jun/2025:14:41:03 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:41:03.668Z [INFO]: ::1 - - [21/Jun/2025:14:41:03 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:41:03.679Z [INFO]: ::1 - - [21/Jun/2025:14:41:03 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:52:17.038Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-21T14:52:17.051Z [INFO]: Conexão com banco estabelecida!
+2025-06-21T14:52:17.351Z [INFO]: Banco sincronizado com sucesso!
+2025-06-21T14:52:39.459Z [INFO]: ::1 - - [21/Jun/2025:14:52:39 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:52:39.464Z [INFO]: ::1 - - [21/Jun/2025:14:52:39 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:52:39.473Z [INFO]: ::1 - - [21/Jun/2025:14:52:39 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:52:39.476Z [INFO]: ::1 - - [21/Jun/2025:14:52:39 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:57:57.872Z [INFO]: Servidor iniciado na porta 3000 - Ambiente: development
+2025-06-21T14:57:57.884Z [INFO]: Conexão com banco estabelecida!
+2025-06-21T14:57:57.893Z [INFO]: Banco sincronizado com sucesso!
+2025-06-21T14:58:57.666Z [INFO]: ::1 - - [21/Jun/2025:14:58:57 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:58:57.678Z [INFO]: ::1 - - [21/Jun/2025:14:58:57 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:58:57.703Z [INFO]: ::1 - - [21/Jun/2025:14:58:57 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:58:57.714Z [INFO]: ::1 - - [21/Jun/2025:14:58:57 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:58:59.370Z [INFO]: ::1 - - [21/Jun/2025:14:58:59 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:58:59.387Z [INFO]: ::1 - - [21/Jun/2025:14:58:59 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:59:00.570Z [INFO]: ::1 - - [21/Jun/2025:14:59:00 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:59:00.584Z [INFO]: ::1 - - [21/Jun/2025:14:59:00 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:59:03.102Z [INFO]: ::1 - - [21/Jun/2025:14:59:03 +0000] "GET /api/product-supplier HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:59:03.120Z [INFO]: ::1 - - [21/Jun/2025:14:59:03 +0000] "GET /api/product-supplier HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:59:04.595Z [INFO]: ::1 - - [21/Jun/2025:14:59:04 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:59:04.601Z [INFO]: ::1 - - [21/Jun/2025:14:59:04 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:59:04.620Z [INFO]: ::1 - - [21/Jun/2025:14:59:04 +0000] "GET /api/products HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-06-21T14:59:04.628Z [INFO]: ::1 - - [21/Jun/2025:14:59:04 +0000] "GET /api/suppliers HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
