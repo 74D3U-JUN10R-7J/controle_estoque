@@ -4,7 +4,8 @@ import Supplier from './pages/supplier';
 import ProductSupplier from './pages/product_supplier';
 import ProductSupplierReport from './pages/product_supplier_report';
 import FornecedorForm from './pages/FornecedorForm';
-import ProductForm from './pages/ProductForm'; // Formulário de produto (cadastro e edição)
+import ProductForm from './pages/ProductForm';
+import PaginaInicial from './pages/pagina-inicial'; // ✅ Importação da página inicial
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <nav style={{ width: '200px', padding: '1rem', backgroundColor: '#f5f5f5' }}>
           <h3>📦 Navegação</h3>
           <ul style={{ listStyleType: 'none', padding: 0 }}>
+            <li><Link to="/">Início</Link></li> {/* ✅ Link para a página inicial */}
             <li><Link to="/product">Produtos</Link></li>
             <li><Link to="/produto_novo">+ Novo Produto</Link></li>
             <li><Link to="/supplier">Fornecedores</Link></li>
@@ -26,9 +28,10 @@ function App() {
         {/* Conteúdo da página */}
         <main style={{ flexGrow: 1, padding: '1rem' }}>
           <Routes>
+            <Route path="/" element={<PaginaInicial />} /> {/* ✅ Rota para a página inicial */}
             <Route path="/product" element={<Product />} />
             <Route path="/produto_novo" element={<ProductForm />} />
-            <Route path="/produto_editar/:id" element={<ProductForm />} /> {/* ✅ Rota adicionada */}
+            <Route path="/produto_editar/:id" element={<ProductForm />} />
             <Route path="/supplier" element={<Supplier />} />
             <Route path="/fornecedor_novo" element={<FornecedorForm />} />
             <Route path="/product_supplier" element={<ProductSupplier />} />
